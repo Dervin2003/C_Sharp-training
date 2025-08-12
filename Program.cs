@@ -1,0 +1,52 @@
+﻿using System;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Test("Test");
+            NewTest.OopTest();
+
+            ObjectTest objectTest = new ObjectTest();
+            objectTest.ObjTest();
+        }
+
+        static void Test(string name)
+        {
+            Console.WriteLine("My name is " + name);
+        }
+    }
+
+    class NewTest 
+    {
+        public static void OopTest()
+        {
+            Console.WriteLine("I am NEW TEST");
+        }
+    }
+
+}
+
+/* DATA TYPES
+ * Value type - structs , enums
+ * Reference type - delegate
+ * 
+ * int.MaxValue()
+ * int.MinValue()
+ * int.SizeOf()
+ * 
+ * MEMORY TYPES
+ * stack,heap
+ * 
+ * TYPE CASTING
+ * implicit,explicit
+ * 
+ * OPERATORS
+ * Arithmetic: +, -, *, /, %
+ * ++,-- unary operators
+ * +=,-= compound assignment
+ * 
+ * PRECEDENCE
+*/
