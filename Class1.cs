@@ -7,7 +7,7 @@ namespace ConsoleApp2
         public void DataTypes()
         {   byte myByte = 2;
             short myShort = 32767;
-            int myInt = 2147483647;
+            int myInt = 21;
             long myLong = 9223372036854775807;
             float myFloat = 3.40282347E+38F;
             double myDouble = 1.7976931348623157E+308;
