@@ -9,8 +9,19 @@ namespace ConsoleApp2
             Test("Test");
             NewTest.OopTest();
 
+            int a = 1;
+            a++;
+            ++a;
+            a--;
+            Console.WriteLine(a);
+
             ObjectTest objectTest = new ObjectTest();
             objectTest.ObjTest();
+
+            Class1 class1 = new Class1();
+            class1.DataTypes();
+            class1.ArithOperators();
+            class1.LogicOperators();
         }
 
         static void Test(string name)
