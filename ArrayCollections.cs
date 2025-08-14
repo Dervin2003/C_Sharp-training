@@ -55,6 +55,54 @@ namespace ConsoleApp2
             nums.Add(56);
             nums.AddRange(new int[] { 12, 67, 59, 67 });
             nums.ForEach(x => Console.WriteLine(x));
+
+            Console.WriteLine("Initial List:");
+            nums.ForEach(x => Console.WriteLine(x));
+
+            nums.InsertRange(2, new int[] { 99, 100 });
+            Console.WriteLine("\nAfter InsertRange at index 2:");
+            nums.ForEach(x => Console.WriteLine(x));
+
+            nums.Remove(67);
+            Console.WriteLine("\nAfter Remove(67):");
+            nums.ForEach(x => Console.WriteLine(x));
+
+            nums.RemoveAt(0);
+            Console.WriteLine("\nAfter RemoveAt(0):");
+            nums.ForEach(x => Console.WriteLine(x));
+
+            nums.RemoveRange(1, 2);
+            Console.WriteLine("\nAfter RemoveRange(1, 2):");
+            nums.ForEach(x => Console.WriteLine(x));
+
+            Console.WriteLine($"\nContains 59? {nums.Contains(59)}");
+            Console.WriteLine($"Index of 59: {nums.IndexOf(59)}");
+            Console.WriteLine($"Last Index of 67: {nums.LastIndexOf(67)}");
+
+            nums.Sort();
+            Console.WriteLine("\nAfter Sort:");
+            nums.ForEach(x => Console.WriteLine(x));
+
+            nums.Reverse();
+            Console.WriteLine("\nAfter Reverse:");
+
+            Console.WriteLine($"\nFirst number > 50: {nums.Find(n => n > 50)}");
+            List<int> bigNums = nums.FindAll(n => n > 50);
+            Console.WriteLine("All numbers > 50:");
+            bigNums.ForEach(x => Console.WriteLine(x));
+
+            Console.WriteLine($"Any negative numbers? {nums.Exists(n => n < 0)}");
+
+            Console.WriteLine($"\nCapacity: {nums.Capacity}");
+            Console.WriteLine($"Count: {nums.Count}");
+
+            int[] arr = nums.ToArray();
+            Console.WriteLine("\nArray version:");
+            foreach (var n in arr)
+                Console.WriteLine(n);
+
+            nums.Clear();
+            Console.WriteLine($"\nAfter Clear, Count: {nums.Count}");
         }
 
 
@@ -144,12 +192,15 @@ namespace ConsoleApp2
             set1.UnionWith(set2);
             Console.WriteLine("Union: " + string.Join(", ", set1));
 
+            set1 = new HashSet<int>() { 1, 2, 3 };
             set1.IntersectWith(set2);
             Console.WriteLine("Intersection: " + string.Join(", ", set1));
 
+            set1 = new HashSet<int>() { 1, 2, 3 };
             set1.ExceptWith(set2);
             Console.WriteLine("Except: " + string.Join(", ", set1));
 
+            set1 = new HashSet<int>() { 1, 2, 3 };
             set1.SymmetricExceptWith(set2);
             Console.WriteLine("Symmetric Except: " + string.Join(", ", set1));
 
@@ -164,6 +215,18 @@ namespace ConsoleApp2
 
             Console.WriteLine("{1,2,3} equals {3,2,1}? " +
                 new HashSet<int>() { 1, 2, 3 }.SetEquals(new HashSet<int>() { 3, 2, 1 }));
+        }
+
+        public void StringBuilderTest()
+        {
+            StringBuilder sb = new StringBuilder("Hello");
+
+            sb.Append(" World");
+            sb.Insert(5, ",");
+            sb.Replace("World", "C#");
+            sb.Remove(5, 1);
+
+            Console.WriteLine(sb);
         }
     }
 }
