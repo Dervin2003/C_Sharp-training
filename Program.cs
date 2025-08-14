@@ -6,22 +6,41 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            Test("Test");
-            NewTest.OopTest();
+            //Test("Test");
+            //NewTest.OopTest();
 
-            int a = 1;
-            a++;
-            ++a;
-            a--;
-            Console.WriteLine(a);
+            //int a = 1;
+            //a++;
+            //++a;
+            //a--;
+            //Console.WriteLine(a);
 
-            ObjectTest objectTest = new ObjectTest();
-            objectTest.ObjTest();
+            //ObjectTest objectTest = new ObjectTest();
+            //objectTest.ObjTest();
 
-            Class1 class1 = new Class1();
-            class1.DataTypes();
-            class1.ArithOperators();
-            class1.LogicOperators();
+            //Class1 class1 = new Class1();
+            //class1.DataTypes();
+            //class1.ArithOperators();
+            //class1.LogicOperators();
+
+            ConditionalLooping cl= new ConditionalLooping();
+            Console.WriteLine("\n-------------------------------------\n");
+            cl.BreakTest();
+            Console.WriteLine("\n-------------------------------------\n");
+            cl.ContinueTest();
+            Console.WriteLine("\n-------------------------------------\n");
+            cl.SwitchTest();
+            Console.WriteLine("\n-------------------------------------\n");
+            cl.IfElseTest();
+            Console.WriteLine("\n-------------------------------------\n");
+            cl.ForTest();
+            Console.WriteLine("\n-------------------------------------\n");
+            cl.WhileTest();
+            Console.WriteLine("\n-------------------------------------\n");
+            cl.DoWHileTest();
+            Console.WriteLine("\n-------------------------------------\n");
+            cl.ForEachTest();
+            Console.WriteLine("\n-------------------------------------\n");
         }
 
         static void Test(string name)
