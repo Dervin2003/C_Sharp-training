@@ -9,7 +9,8 @@ namespace ConsoleApp2
             ArrayCollections ac = new ArrayCollections();
             //ac.ArrayTry();
             //ac.ListTry();
-            ac.DictTry();
+            //ac.DictTry();
+            ac.HashSetTry();
 
             //Test("Test");
             //NewTest.OopTest();

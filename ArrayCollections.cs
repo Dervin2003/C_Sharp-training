@@ -59,7 +59,7 @@ namespace ConsoleApp2
 
 
 
-        public void DictTry ()
+        public void DictTry()
         {
             Dictionary<int, string> dict = new Dictionary<int, string>();
 
@@ -118,80 +118,58 @@ namespace ConsoleApp2
 
         public void HashSetTry()
         {
-            using System;
-            using System.Collections.Generic;
+            HashSet<int> set1 = new HashSet<int>();
 
-class Program
-        {
-            static void Main()
-            {
-                HashSet<int> set1 = new HashSet<int>();
+            Console.WriteLine("Adding 1: " + set1.Add(1));
+            Console.WriteLine("Adding 2: " + set1.Add(2));
+            Console.WriteLine("Adding 2 again: " + set1.Add(2));
+            Console.WriteLine("Set1: " + string.Join(", ", set1));
 
-                Console.WriteLine("=== ADD ===");
-                Console.WriteLine("Adding 1: " + set1.Add(1));
-                Console.WriteLine("Adding 2: " + set1.Add(2));
-                Console.WriteLine("Adding 2 again: " + set1.Add(2));
-                Console.WriteLine("Set1: " + string.Join(", ", set1));
+            Console.WriteLine("Contains 1? " + set1.Contains(1));
+            Console.WriteLine("Contains 5? " + set1.Contains(5));
 
-                Console.WriteLine("\n=== CONTAINS ===");
-                Console.WriteLine("Contains 1? " + set1.Contains(1));
-                Console.WriteLine("Contains 5? " + set1.Contains(5));
+            Console.WriteLine("Remove 1: " + set1.Remove(1));
+            Console.WriteLine("Remove 5: " + set1.Remove(5));
+            Console.WriteLine("Set1 after removal: " + string.Join(", ", set1));
 
-                Console.WriteLine("\n=== REMOVE ===");
-                Console.WriteLine("Remove 1: " + set1.Remove(1));
-                Console.WriteLine("Remove 5: " + set1.Remove(5));
-                Console.WriteLine("Set1 after removal: " + string.Join(", ", set1));
+            Console.WriteLine("Number of elements: " + set1.Count);
 
-                Console.WriteLine("\n=== COUNT ===");
-                Console.WriteLine("Number of elements: " + set1.Count);
+            set1.Clear();
+            Console.WriteLine("Set1 after clear: " + string.Join(", ", set1));
+            Console.WriteLine("Count after clear: " + set1.Count);
 
-                Console.WriteLine("\n=== CLEAR ===");
-                set1.Clear();
-                Console.WriteLine("Set1 after clear: " + string.Join(", ", set1));
-                Console.WriteLine("Count after clear: " + set1.Count);
+            set1 = new HashSet<int>() { 1, 2, 3 };
+            HashSet<int> set2 = new HashSet<int>() { 3, 4, 5 };
 
-                set1 = new HashSet<int>() { 1, 2, 3 };
-                HashSet<int> set2 = new HashSet<int>() { 3, 4, 5 };
+            set1.UnionWith(set2);
+            Console.WriteLine("Union: " + string.Join(", ", set1));
 
-                Console.WriteLine("\n=== UNIONWITH ===");
-                set1.UnionWith(set2);
-                Console.WriteLine("Union: " + string.Join(", ", set1));
+            set1.IntersectWith(set2);
+            Console.WriteLine("Intersection: " + string.Join(", ", set1));
 
-                set1 = new HashSet<int>() { 1, 2, 3 };
-                Console.WriteLine("\n=== INTERSECTWITH ===");
-                set1.IntersectWith(set2);
-                Console.WriteLine("Intersection: " + string.Join(", ", set1));
+            set1.ExceptWith(set2);
+            Console.WriteLine("Except: " + string.Join(", ", set1));
 
-                set1 = new HashSet<int>() { 1, 2, 3 };
-                Console.WriteLine("\n=== EXCEPTWITH ===");
-                set1.ExceptWith(set2);
-                Console.WriteLine("Except: " + string.Join(", ", set1));
+            set1.SymmetricExceptWith(set2);
+            Console.WriteLine("Symmetric Except: " + string.Join(", ", set1));
 
-                set1 = new HashSet<int>() { 1, 2, 3 };
-                Console.WriteLine("\n=== SYMMETRICEXCEPTWITH ===");
-                set1.SymmetricExceptWith(set2);
-                Console.WriteLine("Symmetric Except: " + string.Join(", ", set1));
+            Console.WriteLine("{1,2} subset of {1,2,3}? " +
+                new HashSet<int>() { 1, 2 }.IsSubsetOf(new HashSet<int>() { 1, 2, 3 }));
 
-                Console.WriteLine("\n=== ISSUBSETOF ===");
-                Console.WriteLine("{1,2} subset of {1,2,3}? " +
-                    new HashSet<int>() { 1, 2 }.IsSubsetOf(new HashSet<int>() { 1, 2, 3 }));
+            Console.WriteLine("{1,2,3} superset of {1,2}? " +
+                new HashSet<int>() { 1, 2, 3 }.IsSupersetOf(new HashSet<int>() { 1, 2 }));
 
-                Console.WriteLine("\n=== ISSUPERSETOF ===");
-                Console.WriteLine("{1,2,3} superset of {1,2}? " +
-                    new HashSet<int>() { 1, 2, 3 }.IsSupersetOf(new HashSet<int>() { 1, 2 }));
+            Console.WriteLine("{1,2,3} overlaps {3,4,5}? " +
+                new HashSet<int>() { 1, 2, 3 }.Overlaps(new HashSet<int>() { 3, 4, 5 }));
 
-                Console.WriteLine("\n=== OVERLAPS ===");
-                Console.WriteLine("{1,2,3} overlaps {3,4,5}? " +
-                    new HashSet<int>() { 1, 2, 3 }.Overlaps(new HashSet<int>() { 3, 4, 5 }));
-
-                Console.WriteLine("\n=== SETEQUALS ===");
-                Console.WriteLine("{1,2,3} equals {3,2,1}? " +
-                    new HashSet<int>() { 1, 2, 3 }.SetEquals(new HashSet<int>() { 3, 2, 1 }));
-            }
+            Console.WriteLine("{1,2,3} equals {3,2,1}? " +
+                new HashSet<int>() { 1, 2, 3 }.SetEquals(new HashSet<int>() { 3, 2, 1 }));
         }
-
     }
 }
 
-}
+    
+
+
+
 
