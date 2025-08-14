@@ -6,6 +6,11 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
+            ArrayCollections ac = new ArrayCollections();
+            //ac.ArrayTry();
+            //ac.ListTry();
+            ac.DictTry();
+
             //Test("Test");
             //NewTest.OopTest();
 
@@ -23,39 +28,39 @@ namespace ConsoleApp2
             //class1.ArithOperators();
             //class1.LogicOperators();
 
-            ConditionalLooping cl= new ConditionalLooping();
-            Console.WriteLine("\n-------------------------------------\n");
-            cl.BreakTest();
-            Console.WriteLine("\n-------------------------------------\n");
-            cl.ContinueTest();
-            Console.WriteLine("\n-------------------------------------\n");
-            cl.SwitchTest();
-            Console.WriteLine("\n-------------------------------------\n");
-            cl.IfElseTest();
-            Console.WriteLine("\n-------------------------------------\n");
-            cl.ForTest();
-            Console.WriteLine("\n-------------------------------------\n");
-            cl.WhileTest();
-            Console.WriteLine("\n-------------------------------------\n");
-            cl.DoWHileTest();
-            Console.WriteLine("\n-------------------------------------\n");
-            cl.ForEachTest();
-            Console.WriteLine("\n-------------------------------------\n");
+            //ConditionalLooping cl= new ConditionalLooping();
+            //Console.WriteLine("\n-------------------------------------\n");
+            //cl.BreakTest();
+            //Console.WriteLine("\n-------------------------------------\n");
+            //cl.ContinueTest();
+            //Console.WriteLine("\n-------------------------------------\n");
+            //cl.SwitchTest();
+            //Console.WriteLine("\n-------------------------------------\n");
+            //cl.IfElseTest();
+            //Console.WriteLine("\n-------------------------------------\n");
+            //cl.ForTest();
+            //Console.WriteLine("\n-------------------------------------\n");
+            //cl.WhileTest();
+            //Console.WriteLine("\n-------------------------------------\n");
+            //cl.DoWHileTest();
+            //Console.WriteLine("\n-------------------------------------\n");
+            //cl.ForEachTest();
+            //Console.WriteLine("\n-------------------------------------\n");
         }
 
-        static void Test(string name)
-        {
-            Console.WriteLine("My name is " + name);
-        }
+        //static void Test(string name)
+        //{
+        //    Console.WriteLine("My name is " + name);
+        //}
     }
 
-    class NewTest 
-    {
-        public static void OopTest()
-        {
-            Console.WriteLine("I am NEW TEST");
-        }
-    }
+    //class NewTest 
+    //{
+    //    public static void OopTest()
+    //    {
+    //        Console.WriteLine("I am NEW TEST");
+    //    }
+    //}
 
 }
 
