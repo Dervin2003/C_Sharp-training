@@ -227,12 +227,7 @@ namespace ConsoleApp2
             sb.Remove(5, 1);
 
             Console.WriteLine(sb);
+            var set =new HashSet<int>();
         }
     }
 }
-
-    
-
-
-
-

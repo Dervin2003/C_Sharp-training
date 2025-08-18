@@ -6,11 +6,23 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            ArrayCollections ac = new ArrayCollections();
+            //Recursion re = new Recursion();
+            //re.Call();
+
+            OverLoad ol = new OverLoad();
+            ol.Add(1.4, 2.5);
+
+            //InheritTest it = new Child();
+            //it.MainMethod();
+
+            //MethodS me = new MethodS();
+            //me.RefOutTest();
+
+            //ArrayCollections ac = new ArrayCollections();
             //ac.ArrayTry();
             //ac.ListTry();
             //ac.DictTry();
-            ac.HashSetTry();
+            //ac.HashSetTry();
 
             //Test("Test");
             //NewTest.OopTest();
@@ -85,4 +97,8 @@ namespace ConsoleApp2
  * +=,-= compound assignment
  * 
  * PRECEDENCE
+ * 
+ * ref , out
+ * 
+ * Method Overriding - Virtual, Override 
 */
