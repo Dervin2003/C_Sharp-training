@@ -11,19 +11,22 @@ namespace ConsoleApp2
     {
         public string name;
         private static int num;
+        private static int num2;
 
 
         public static int Num { get => num; set => num = value; }
+        public int Num2 { get { return num2; } set { num2 = value; } }
     }
 
     class Test
     {
         public void OkTest()
         {
-            //EnCaps ec = new EnCaps();
-            //ec.name = "Dervin";
-            //EnCaps.Num = 22;
-            //Console.WriteLine($"My name is {ec.name}, My age is {EnCaps.Num} ");
+            EnCaps ec = new EnCaps();
+            ec.name = "Batman";
+            ec.Num2 = 45;
+            EnCaps.Num = 40;
+            Console.WriteLine($"My name is {ec.name}, My age is between {EnCaps.Num} to {ec.Num2}");
 
             Construct con = new Construct("Loras" , 28);
             con.PrintValue();
