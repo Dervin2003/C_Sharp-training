@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Remoting.Messaging;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
@@ -22,9 +17,11 @@ namespace ConsoleApp2
     {
         public void OkTest()
         {
-            EnCaps ec = new EnCaps();
-            ec.name = "Batman";
-            ec.Num2 = 45;
+            EnCaps ec = new EnCaps()
+            {
+                name = "Batman",
+                Num2 = 45
+            };
             EnCaps.Num = 40;
             Console.WriteLine($"My name is {ec.name}, My age is between {EnCaps.Num} to {ec.Num2}");
 
