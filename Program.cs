@@ -6,11 +6,14 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
+            Test te=new Test();
+            te.OkTest();
+
             //Recursion re = new Recursion();
             //re.Call();
 
-            OverLoad ol = new OverLoad();
-            ol.Add(1.4, 2.5);
+            //OverLoad ol = new OverLoad();
+            //ol.Add(1.4, 2.5);
 
             //InheritTest it = new Child();
             //it.MainMethod();
