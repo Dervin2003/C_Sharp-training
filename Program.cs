@@ -6,8 +6,17 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            Test te=new Test();
-            te.OkTest();
+            AbstractClass absc=new AbstractClass();
+            absc.Best();
+            absc.Test();
+            absc.Rest();
+            absc.Another(); 
+
+            INewInterface ini = absc;
+            ini.Test();
+
+            //Test te = new Test();
+            //te.OkTest();
 
             //Recursion re = new Recursion();
             //re.Call();
