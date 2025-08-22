@@ -6,14 +6,26 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            AbstractClass absc=new AbstractClass();
-            absc.Best();
-            absc.Test();
-            absc.Rest();
-            absc.Another(); 
+            StudentForm form = new StudentForm();
+            form.FormCreate();
 
-            INewInterface ini = absc;
-            ini.Test();
+            //ItextTest itt = new ItextTest();
+            //itt.PdfGen();
+            //itt.ReadPdf();
+            //itt.DrawShapes();
+
+            //DirecTory dt = new DirecTory();
+            //dt.Creation();
+            //dt.FileAdd();
+
+            //AbstractClass absc=new AbstractClass();
+            //absc.Best();
+            //absc.Test();
+            //absc.Rest();
+            //absc.Another(); 
+
+            //INewInterface ini = absc;
+            //ini.Test();
 
             //Test te = new Test();
             //te.OkTest();

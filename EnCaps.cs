@@ -13,7 +13,7 @@ namespace ConsoleApp2
         public int Num2 { get { return num2; } set { num2 = value; } }
     }
 
-    class Test
+    class Test : Construct
     {
         public void OkTest()
         {
@@ -27,6 +27,8 @@ namespace ConsoleApp2
 
             Construct con = new Construct("Loras" , 28);
             con.PrintValue();
+            int any = test;
+            Console.WriteLine(any);
             Construct con1 = new Construct("Tywin", 60);
             con1.PrintValue();
             Construct con2 = new Construct();
@@ -38,11 +40,13 @@ namespace ConsoleApp2
     {
         public string name;
         public int age;
+        protected int test;
 
         public Construct()
         {
             this.name = "Your Name";
             this.age = 0;
+            this.test = 10;
         }
 
         public Construct(string name ,int age)
